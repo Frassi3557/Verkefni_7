@@ -1,0 +1,22 @@
+* { 
+	
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	border: 2px dotted skyblue;
+	text-align: center;
+}
+
+.main {
+	font-family: 'Raleway', sans-serif;
+	background-color: lightgray;
+	height: 100%;
+}
