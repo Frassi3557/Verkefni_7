@@ -1,22 +1,49 @@
-* { 
-	
-}
-
 body {
   margin: 0 auto;
+	position: absolute;
   width: 100%;
 }
 
 .header {
 	width: 100%;
+	background-color: skyblue;
 	position: fixed;
 	top: 0;
-	border: 2px dotted skyblue;
 	text-align: center;
+	z-index: 1;
 }
 
 .main {
+	margin-top: 5.03em;
 	font-family: 'Raleway', sans-serif;
 	background-color: lightgray;
 	height: 100%;
+	z-index: 0;
+}
+
+.big-news {
+	width: 100%;
+	background-color: aquamarine;
+}
+
+.news {
+	position: relative;
+	float: left;
+	background-color: aqua;
+	width: 50%;
+}
+
+/*	Responsive Web Design	*/
+
+@media screen and (min-width: 30em) { }
+
+@media screen and (min-width: 48em) { }
+
+@media screen and (min-width: 60em) {
+	body {
+		width: 30em;
+	}
+	.big-news {
+		width: 40%;
+	}
 }
