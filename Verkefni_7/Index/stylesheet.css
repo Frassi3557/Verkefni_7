@@ -1,20 +1,81 @@
+* {
+	text-decoration: none;
+}
+
+body::-webkit-scrollbar { width: 1em; background-color: #fff; }
+body::-webkit-scrollbar-thumb { background-color: #888888; border-radius: .2em; }
+body::-webkit-scrollbar-thumb:hover { background-color: grey; }
+body::-webkit-scrollbar-thumb:active { background-color: #686868; }
+
 body {
   margin: 0 auto;
 	position: absolute;
   width: 100%;
 }
 
-.header {
+/*  Header/Navigation  */
+
+header {
 	width: 100%;
-	background-color: skyblue;
+	background-color: #E0E0E0;
 	position: fixed;
 	top: 0;
 	text-align: center;
-	z-index: 1;
+	text-transform: uppercase;
+	z-index: 1001;
 }
 
+label{
+  font-size: 2em;
+  cursor: pointer;
+}
+
+input{
+  display: none;
+}
+
+input:checked ~ nav{
+  height: 14.05em;
+  transition: all 1s ease;
+}
+
+nav{
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: all 1s ease;
+}
+
+.menu {
+	font-family: 'Raleway', sans-serif;
+}
+
+.topmenu {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-color: #cccccc;
+  padding-left: 0;
+}
+
+.topmenu li {
+  display: block;
+  list-style-type: none;
+ 	padding: .6em 1em;
+  font-size: 1.5em;
+  text-align: center;
+  transition: background-color .2s ease; 
+}
+
+.topmenu li{
+  color: #404040;
+}
+
+/*	Main Body 	*/
+
 .main {
-	margin-top: 5.03em;
+	margin-top: 8.2em;
 	font-family: 'Raleway', sans-serif;
 	background-color: lightgray;
 	height: 100%;
@@ -33,7 +94,13 @@ body {
 	width: 50%;
 }
 
+.description {
+	background-color: rgba(100, 100, 100, 06);
+	z-index: 1;
+}
+
 /*	Responsive Web Design	*/
+
 
 @media screen and (min-width: 30em) { }
 
