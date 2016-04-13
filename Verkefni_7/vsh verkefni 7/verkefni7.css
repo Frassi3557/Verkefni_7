@@ -2,6 +2,20 @@ body{
 	margin: 0;
 	padding: 0;
 }
+body::-webkit-scrollbar {
+    width: 1em;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #888888;
+  border-radius: .2em;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: grey;
+}
+body::-webkit-scrollbar-thumb:active {
+  background-color: #686868;
+    #888888
+}
 *{
 	list-style: none;
 	text-decoration: none;
@@ -12,11 +26,16 @@ header{
 	position: fixed;
 	left: 0;
 	top: 0;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
 }
 header h1{
 	text-align: center;
 	font-size: 2.5em;
 	color: black;
+  margin: 0;
+  margin-top: .5em;
 }
 input{
   display: none;
@@ -26,7 +45,7 @@ label{
   cursor: pointer;
 }
 input:checked ~ nav{
-  height: 9.4em;
+  height: 14.055em;
   transition: all 1s ease;
 }
 nav{
@@ -47,7 +66,7 @@ nav{
     display: block;
     list-style-type: none;
     padding: .6em 1em;
-    font-size: 1em;
+    font-size: 1.5em;
     text-align: center;
     transition: background-color .2s ease; 
   }
@@ -56,8 +75,45 @@ nav{
     text-decoration: none;
     text-transform: uppercase;
   }
-  .topmenu li:hover{
-    background-color: #808080;
-    color: black;
-    transition: background-color .2s ease;
+
+
+
+
+
+
+
+
+
+/***********30em og yfir*****************************/
+
+@media screen and (min-width: 48em) {
+  .checkbox{
+    display: none;
   }
+  nav{
+    height: 100%;
+  }
+  .topmenu {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #E0E0E0;
+  }
+  .topmenu li {
+    display: inline-block;
+    list-style-type: none;
+    padding: .6em 1em;
+    font-size: 1.4em;
+  }
+  .topmenu li{
+    color: #404040;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color .5s ease, background-color .4s ease;
+  }
+  .topmenu li:hover{
+    background-color: #000;
+    color: #fff;
+    transition: color 1s ease, background-color .8s ease;
+  }
+}
