@@ -2,6 +2,8 @@ body{
 	margin: 0;
 	padding: 0;
   	width: auto;
+  	height: auto;
+  	font-family: 'Raleway', sans-serif;
 }
 body::-webkit-scrollbar {
     width: 1em;
@@ -38,14 +40,17 @@ header h1{
   margin: 0;
   margin-top: .5em;
 }
-input{
+header h1, hr{
+	display: none;
+}
+.input1{
   display: none;
 }
-label{
+.checkbox{
   font-size: 2em;
   cursor: pointer;
 }
-input:checked ~ nav{
+.input1:checked ~ nav{
   height: 14.51em;
   transition: all 1s ease;
 }
@@ -81,9 +86,138 @@ nav{
     color: #fff;
   }
 
+  /*   Section  */
 
+section{
+	margin-top: 5em;
+	margin-bottom: 3em;
+}
+.section2{
+	margin-top: 4em;
+	margin-bottom: 3em;
+}
+.askrift h1{
+	font-size: 2.5em;
+	text-align: center;
+	margin-bottom: .3em;
+}
+.askrift fieldset{
+	border: 3px solid black;
+	background-color: #d9d9d9;
+	font-size: 1.7em;
+}
+input[type=text]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: .7em;
+    font-family: 'Raleway', sans-serif;
+    outline: none;
+    transition: border 0.5s ease;
+}
+input[type=text]:focus{
+    border: 3px solid black;
+    transition: border 0.5s ease;
+}
+input[type=email]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: .7em;
+    font-family: 'Raleway', sans-serif;
+    outline: none;
+    transition: border 0.5s ease;
+}
+input[type=email]:focus{
+    border: 3px solid black;
+    transition: border 0.5s ease;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #46CFC1;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+}
 
+input[type=submit]:active {
+    background-color: #3fbb99;
+}
+/*Heim Takki*/
+.home-button {
+  border: 0;
+  background: #0087cc;
+  width: 9em;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #006599;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  outline: 0;
+  margin: 0 auto;
+  padding: 12px 20px;
+  transition: all .1s linear;
+}
+.home-button:active {
+  box-shadow: 0 2px 0 #006599;
+  transform: translateY(3px);
+}
+.thanx{
+	width: 80%;
+	margin: 0 auto;
+}
+.thanx h1, h3{
+	text-align: center;
+}
 
+/*  Footer */
+
+footer {
+  font-family: 'Raleway', sans-serif;
+  background-color: #1C1C1C;
+  text-align: center;
+  color: #46CFC1;
+  height: 18em;
+  position: relative;
+}
+.footer2{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	height: 10em;
+}
+.bottom-menu{
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.bottom-menu li{
+   display: inline-block;
+   list-style-type: none;
+   padding: .6em 1em;
+   font-size: 1em;
+   text-align: center;
+   color: #fff;
+}
+.bottom-menu li:hover{
+    text-decoration: none;
+}
+.bottom-menu li:active{
+    text-decoration: underline;
+}
 
 
 
@@ -91,13 +225,16 @@ nav{
 /***********30em og yfir*****************************/
 
 @media screen and (min-width: 48em) {
+	header h1, hr{
+		display: block;
+	}
   .checkbox{
     display: none;
   }
   nav{
     height: 3.4em;
   }
-  input:checked ~ nav{
+  .input1:checked ~ nav{
   height: 3.4em;
   transition: height .5s ease;
   }
@@ -123,5 +260,26 @@ nav{
     background-color: #000;
     color: #fff;
     transition: color 1s ease, background-color .8s ease;
+  }
+  .askrift{
+    width: 48em;
+    margin: 0 auto;
+  }
+  section{
+	margin-top: 10em;
+	margin-bottom: 3em;
+  }
+  .section2{
+	margin-top: 11em;
+	margin-bottom: 3em;
+  }
+  .bottom-menu li:hover{
+    text-decoration: underline;
+  }
+  footer {
+  height: 10em;
+  }
+  .bottom-menu li{
+   font-size: 2em; 
   }
 }
