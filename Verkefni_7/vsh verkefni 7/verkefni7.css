@@ -159,9 +159,38 @@ input[type=submit]:active {
 /********************************** Eigendur ************************************/
 .eigendur_myndir h1, p{
 	text-align: center;
+  transition: font-size .5s ease;
 }
 .mynd{
 	width: 100%;
+}
+
+/********************************** Photos ************************************/
+.photos{
+	max-width: 70em;
+	margin: 0 auto;
+}.photo{
+	width: 100%;
+}
+.description {
+  position: relative;
+  bottom: 10em;
+  width: 40em;
+  color: black;
+  background-color: white;
+  z-index: 1;
+  opacity: 1;
+}
+.photo:hover{
+	cursor: pointer;
+}
+.photo:hover ~ .description{
+	width: 50em;
+	transition: 1s ease;
+}
+.description p{
+	font-size: 1.6em;
+	transition: none;
 }
 
 
@@ -292,22 +321,17 @@ footer {
    font-size: 2em;
    display: inline-block;
   }
-  /********************************** Eigendur ************************************/
-  	.eigendur_myndir{
-  		width: 80%;
-  		margin: 0 auto;
-  	}
-	.eigendur_myndir h1{
-	text-align: left;
-	font-size: 2em;
-	}
-	.eigendur_myndir p{
-	width: 60%;
-	font-size: 1.8em;
-	float: right;
-	padding-right: 3em;
-	}
-	.mynd{
-	width: 30%;
-	}
+  /**************** Eigendur ********************/
+  .eigendur_myndir{
+    width: 48em;
+    margin: 0 auto;
+    margin-top: 10em;
+  }
+  .eigendur_myndir p{
+    font-size: 1.5em;
+    transition: font-size .5s ease;
+  }
+  .eigendur_myndir h1{
+    font-size: 2em;
+  }
 }
