@@ -176,21 +176,27 @@ input[type=submit]:active {
   position: relative;
   bottom: 10em;
   width: 40em;
-  color: black;
-  background-color: white;
+  opacity: 0;
+  color: white;
+  background-color: black;
   z-index: 1;
   opacity: 1;
+  transition: width 1s ease, border-radius 1s ease;
+  border-top-right-radius: 5em;
+  border-bottom-right-radius: 5em;
 }
 .photo:hover{
 	cursor: pointer;
 }
 .photo:hover ~ .description{
 	width: 50em;
-	transition: 1s ease;
+	transition: width 1s ease, border-radius 1s ease;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .description p{
 	font-size: 1.6em;
-	transition: none;
+  padding: 1em;
 }
 
 
