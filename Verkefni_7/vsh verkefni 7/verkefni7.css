@@ -174,28 +174,27 @@ input[type=submit]:active {
 }
 .description {
   position: relative;
-  bottom: 10em;
-  width: 40em;
+  bottom: 0;
+  width: auto;
   opacity: 0;
   color: white;
   background-color: black;
   z-index: 1;
   opacity: 1;
   transition: width 1s ease, border-radius 1s ease;
-  border-top-right-radius: 5em;
-  border-bottom-right-radius: 5em;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .photo:hover{
 	cursor: pointer;
 }
-.photo:hover ~ .description{
-	width: 50em;
+.photo:active ~ .description{
 	transition: width 1s ease, border-radius 1s ease;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 .description p{
-	font-size: 1.6em;
+	font-size: 1.4em;
   padding: 1em;
 }
 
@@ -340,4 +339,178 @@ footer {
   .eigendur_myndir h1{
     font-size: 2em;
   }
+  /********************************** Photos ************************************/
+	.photos{
+		max-width: 70em;
+		margin: 0 auto;
+	}.photo{
+		width: 100%;
+	}
+	.description {
+	  position: relative;
+	  bottom: 10em;
+	  width: 80%;
+	  opacity: 0;
+	  color: white;
+	  background-color: black;
+	  z-index: 1;
+	  opacity: 1;
+	  transition: width 1s ease, border-radius 1s ease;
+	  border-top-right-radius: 5em;
+	  border-bottom-right-radius: 5em;
+	}
+	.photo:hover{
+		cursor: pointer;
+	}
+	.photo:hover ~ .description{
+		width: 95%;
+		transition: width 1s ease, border-radius 1s ease;
+	  border-top-right-radius: 0;
+	  border-bottom-right-radius: 0;
+	}
+	.description p{
+		font-size: 1.6em;
+	  padding: 1em;
+	}
+}
+
+
+/*	Main Body 	*/
+
+.snorri_top-row {
+	width: 100%;
+	max-height: inherit;
+	overflow: hidden;
+}
+.snorri_main {
+  margin-top: 4.8em;
+  background-color: #fff;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+.snorri_big-news {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.snorri_big-news img {
+  width: 100%;
+  height: 100%;
+}
+.snorri_news {
+  position: relative;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+}
+.snorri_news img {
+  width: 100%;
+  height: 100%;
+}
+.snorri_description {
+  position: absolute;
+  bottom: 3px;
+  width: 30em;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 1;
+}
+.snorri_big-news .snorri_description {
+  width: 100%;
+}
+.snorri_news .snorri_description {
+  width: 100%;
+  text-align: center;
+}
+
+/*Snorri Main Responsive*/
+@media screen and (min-width: 60em) {
+	.snorri_top-row {
+		float: left;
+		margin-bottom: 3px;
+	}
+	.snorri_main {
+		margin: 0 auto;
+		margin-top: 4.8em;
+		width: 80%;
+	}
+	.snorri_big-news {
+		float: left;
+		width: 65%;
+		margin-right: 0.4em;
+    -webkit-transition: all .3s ease;
+	}
+	.snorri_news {
+		float: left;
+		width: 49.8%;
+		-webkit-transition: all .3s ease;
+	}
+    .snorri_news:first-child {
+      margin-right: 3px;
+  
+	}
+	.snorri_ad {
+		position: relative;
+		width: 34%;
+		border: 1px solid #000;
+		overflow: hidden;
+		margin-top: 1em;
+	}
+	.snorri_ad img {
+		height: 100%;
+		width: 100%;
+		z-index: 0;	
+	}
+	.snorri_ad-text {
+		color: #46CFC1;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.85);
+		position: absolute;	
+		bottom: 0;
+    -webkit-animation-name: ad-anim;
+    -webkit-animation-duration: 12s;
+    animation-name: ad-anim;
+    animation-duration: 12s;
+    animation-iteration-count: infinite; 
+		z-index: 1;
+	}
+	@keyframes ad-anim {
+  {-webkit-animation-timing-function: ease;}
+					{animation-timing-function: ease;}
+    0%   {top: 27em;}
+    25%  {top: 0em;}
+		70%  {top: 0em;}
+		100% {top: 27em;}
+	}
+
+	.snorri_description {
+		 height: 0;
+		 -webkit-transition: all .3s ease;
+	}
+	.snorri_big-news a,
+	.snorri_news a {
+		 -webkit-transition: .description .3s ease; 
+	}
+  .snorri_big-news .snorri_description {
+     bottom: -2px;
+  }
+  .snorri_news .snorri_description {
+     bottom: 5px;
+  }
+  .snorri_big-news:hover .snorri_description {
+		 height: 10em;
+     bottom: -2px;
+		-webkit-transition: .description .3s ease;
+	}
+	.snorri_news:hover .snorri_description {
+		height: 5em;
+    bottom: 5px;
+		-webkit-transition: .description .3s ease;
+	}
+	.snorri_big-news a:hover img,
+	.snorri_news a:hover img {
+		-webkit-transition: .description .4s ease;	
+		-webkit-filter:blur(4px);
+	}
 }
