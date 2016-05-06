@@ -92,8 +92,12 @@ nav{
   ========================================
 */
 
+h2 {
+	text-align: center;
+}
 .main {
   margin-top: 5.2em;
+	margin: 0 auto;
   font-family: 'Raleway', sans-serif;
   background-color: #fff;
   height: 100%;
@@ -136,7 +140,7 @@ article:first-letter {
 .social {
   position: relative;
   overflow: hidden;
-  width: 50%;
+  width: 100%;
 	margin: 0 auto;
 }
 .social ul {
@@ -184,16 +188,16 @@ article:first-letter {
 /* -----	Logos	----- */
 
 .twitter {
-	background: transparent url('pictures/social/logos.png') 0 0 no-repeat;
+	background: transparent url('../pictures/social/logos.png') 0 0 no-repeat;
 }
 .facebook {
-	background: transparent url('pictures/social/logos.png') 0 -3em no-repeat;
+	background: transparent url('../pictures/social/logos.png') 0 -3em no-repeat;
 }
 .pinterest {
-	background: transparent url('pictures/social/logos.png') 0 -6em no-repeat;
+	background: transparent url('../pictures/social/logos.png') 0 -6em no-repeat;
 }
 .instagram {
-	background: transparent url('pictures/social/logos.png') 0 -9em no-repeat;
+	background: transparent url('../pictures/social/logos.png') 0 -9em no-repeat;
 }
 
 /*
@@ -224,7 +228,25 @@ footer {
 
 }
 
-@media screen and (min-width: 48em) { }
+@media screen and (min-width: 48em) {
+body {
+		min-width: 100%;
+	}
+	.main {
+		margin: 0 auto;
+		margin-top: 5.5em;
+		width: 80%;
+	}
+    article {
+        font-size: 1.5em;
+    }
+	.big-news {
+		width: 40%;
+	}
+	.social {
+		width: 50%;
+	}
+}
 
 @media screen and (min-width: 60em) {
 	body {
@@ -240,5 +262,8 @@ footer {
     }
 	.big-news {
 		width: 40%;
+	}
+	.social {
+		width: 50%;
 	}
 }

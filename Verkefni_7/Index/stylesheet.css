@@ -120,6 +120,9 @@ nav {
   width: 100%;
   text-align: center;
 }
+.ad {
+	margin: 0 auto;	
+}
 
 /*  Footer */
 
@@ -149,6 +152,12 @@ footer {
 		max-width: 100%;
 	}
 	.main {
+		width: 100%;
+	}
+	.ad {
+		display: none;
+	}
+	.big-news {
 		width: 100%;
 	}
 }
@@ -187,6 +196,7 @@ footer {
   
 	}
 	.ad {
+		display: block;
 		position: relative;
 		width: 34%;
 		border: 1px solid #000;
